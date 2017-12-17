@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Anki pusher</title>
+    <style type="text/css">
+      body {
+        margin: 10px;
+        white-space: nowrap;
+      }
+
+      h1 {
+        font-size: 15px;
+      }
+
+      #container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>   
+  </head>
+
+  <body>
+
+    <div id="container">
+        <span>Choose a deck</span>
+        <select id="deck">
+        </select>
+    </div>
+
+    <button id="prepareNote">Prepare</button>
+    <h1>Preview:</h1>
+    <form name="note">
+      <div id="container">
+          <span>Czech:</span>
+          <input id="front" type="text"/>
+      </div>
+      <div id="container">
+          <span>German:</span>
+          <input id="back" type="text"/>
+      </div>
+      
+      <div id="container">
+          <a href="" id="playSound"> <img src="ico-speaker.gif" alt="Přehrát zvuk" title="Přehrát zvuk"> </a>
+      </div>
+
+    </form>
+    
+    <button id="push">Push</button>
+
+    <script type="text/javascript" src="jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="pushNoteIntoAnki.js"></script>
+    <script type="text/javascript" src="crawler.js"></script>
+    <script type="text/javascript" src="prepareNote.js"></script>
+  </body>
+</html>
