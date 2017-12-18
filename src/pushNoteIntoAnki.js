@@ -40,31 +40,4 @@ function postNoteToAnki() {
         alert("An error occured: " + response["error"]);
 }
 
-function populateDecksOptions(){
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", localhostUrl ,false);
-    xhttp.setRequestHeader("Content-type", "application/json");
-    xhttp.send(JSON.stringify({ "action": "deckNames", "version": 5}));
-    var response = JSON.parse(xhttp.responseText);
-    if(response["result"] == null){
-        alert("An error occured: " + response["error"]);
-        return;
-    }
-
-    var select = document.getElementById("deck"); 
-    var options = response["result"];
-    
-    for(var i = 0; i < options.length; i++) {
-        var opt = options[i];
-        var el = document.createElement("option");
-        el.textContent = opt;
-        el.value = opt;
-        select.appendChild(el);
-    }
-}
-
 document.getElementById("push").addEventListener('click', postNoteToAnki);
-
-window.onload = function() {
-    populateDecksOptions();
-};
