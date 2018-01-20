@@ -38,6 +38,11 @@ function postNoteToAnki() {
     var response = JSON.parse(xhttp.responseText);
     if(response["result"] == null)
         alert("An error occured: " + response["error"]);
+    else{
+        $('#front').val("");
+        $('#back').val("");
+        $('#playSound').attr("href","");
+    }
 }
 
 document.getElementById("push").addEventListener('click', postNoteToAnki);

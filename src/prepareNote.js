@@ -11,11 +11,12 @@ function processResponse(values) {
     $('#front').val(values["czech"]);
     $('#back').val(values["german"]);
     $('#playSound').attr("href", values["audio"]);
+    populateDecksOptions(values["lang"]);
 }
 
 document.getElementById("prepareNote").addEventListener('click', prepareNote);
 
-function populateDecksOptions(){
+function populateDecksOptions(lang){
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", localhostUrl ,false);
     xhttp.setRequestHeader("Content-type", "application/json");
@@ -34,11 +35,15 @@ function populateDecksOptions(){
         var el = document.createElement("option");
         el.textContent = opt;
         el.value = opt;
+        if(opt.toLowerCase().indexOf("[" + lang + "]") != -1)
+            el.selected = 'selected'
         select.appendChild(el);
     }
+
+    $('#deck').find(":selected")
 }
 
 window.onload = function() {
     prepareNote();
-    populateDecksOptions();
+
 };
