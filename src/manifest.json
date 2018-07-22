@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
 
-  "name": "Anki pusher",
-  "description": "This extension allows the user to push a german words into his Anki from slovnik.seznam.cz",
-  "version": "1.0",
+  "name": "Anki Seznam.cz pusher",
+  "description": "Toto rozšíření vám umožní přidávat slovíčka do Anki balíčků ze stránky slovnik.seznam.cz",
+  "version": "1.0.2",
 
   "browser_action": {
     "default_icon": "icon.png",

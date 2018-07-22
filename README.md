@@ -1,10 +1,11 @@
 # AnkiSeznamChromeExt
-Chrome extensions that lets you add notes based on czech - german translation from slovnik.seznam.cz 
+Chrome extensions that lets you add notes based on czech - german translation from slovnik.seznam.cz
+It is published in the Chrome Web Store - https://chrome.google.com/webstore/detail/anki-seznamcz-pusher/jeoglmokmbdchijahjcikacjgenminke?hl=en
 
 # Setup
-1. Add AnkiConnect to your desktop Anki application - https://foosoft.net/projects/anki-connect/
-2. Add this exstension to Chrome. -> Go to Extension settings tab and drag and drop the src folder there. Developer mode has to be enabled. More info here - https://developer.chrome.com/extensions/getstarted#unpacked
-3. Get rid of the anonying warning that you are using an extension in developer mode - run the patchChrome.bat as administrator with Chrome shut down - https://stackoverflow.com/questions/30287907/how-to-get-rid-of-disable-developer-mode-extensions-pop-up
+1. Install Anki desktop version - https://apps.ankiweb.net/
+2. Add AnkiConnect to your desktop Anki application - https://foosoft.net/projects/anki-connect/
+3. Add this exstension to Chrome. -> https://chrome.google.com/webstore/detail/anki-seznamcz-pusher/jeoglmokmbdchijahjcikacjgenminke?hl=en
 
 # Usage
 1. Run Anki on your computer
